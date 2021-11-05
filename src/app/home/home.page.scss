@@ -1,0 +1,16 @@
+
+button{
+background: cornflowerblue;
+}
+.scan-box{
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 100vmax black;
+  content: '';
+  display:block;
+  left: 50%;
+  height: 75px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 395px;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "scannerCedula",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

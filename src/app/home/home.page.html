@@ -1,0 +1,38 @@
+<ion-header [hidden]="scanActivate">
+  <ion-toolbar>
+    <ion-title>
+     Scanner de cedula
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [style.--background]="scanActivate ? '#00000000' : '#fff'" >
+    <ion-button expand="full" (click)="startScanner()" [hidden]="scanActivate">Scanear cedula</ion-button>
+    <ion-list *ngIf="result && !scanActivate">
+      <ion-item>
+        <ion-label><strong>Numero Identificacion:</strong> {{info.num}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Nombres:</strong> {{info.nombre}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Apellidos:</strong> {{info.apellido}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Genero:</strong> {{info.genero}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Fecha Nacimiento: </strong> {{info.cumple}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Tipo Sangre:</strong> {{info.sangre}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+  <ion-col class="ion-no padding">
+    <ion-button expand="full" (click)="stopScanner()" [hidden]="!scanActivate">Stop</ion-button>
+  </ion-col>
+</ion-row>
+ <!-- <div class="scan-box" [hidden]="!scanActivate">
+ </div> -->
+</ion-content>
